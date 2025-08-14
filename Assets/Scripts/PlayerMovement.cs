@@ -4,18 +4,31 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public float moveSpeed;
+    public float jumpForce;
+    public bool isJumping;
+    public bool isGrounded;
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
     // Update is called once per frame
     void FixedUpdate()
     {
         float horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-       
+
         MovePlayer(horizontalMovement);
+        if (Input.GetButtonDown("Jump"))
+        {
+            //rb.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
+            isJumping = true;
+        }
     }
     void MovePlayer(float _horizontalMovement)
     {
         Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.linearVelocity.y);
-    rb.linearVelocity = Vector3.SmoothDamp(rb.linearVelocity, targetVelocity, ref velocity, 0.05f);
+        rb.linearVelocity = Vector3.SmoothDamp(rb.linearVelocity, targetVelocity, ref velocity, 0.05f);
+        if (isJumping == true)
+        {
+            rb.AddForce(new Vector2(0f, jumpForce));
+            isJumping = false;
+         }
     }
 }
