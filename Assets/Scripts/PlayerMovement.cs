@@ -5,17 +5,20 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public float moveSpeed;
     public float jumpForce;
-    public bool isJumping;
-    public bool isGrounded;
+    private bool isJumping;
+    private bool isGrounded;
+    public Transform  groundCheckLeft;
+    public Transform  groundCheckRight;
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
     // Update is called once per frame
     void FixedUpdate()
     {
+        isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
         float horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
         MovePlayer(horizontalMovement);
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             //rb.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
             isJumping = true;
