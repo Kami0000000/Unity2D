@@ -5851,6 +5851,7 @@ GameObject:
   - component: {fileID: 2124488971}
   - component: {fileID: 2124488970}
   - component: {fileID: 2124488972}
+  - component: {fileID: 2124488973}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5944,8 +5945,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 250
   jumpForce: 300
-  isJumping: 0
-  isGrounded: 0
   groundCheckLeft: {fileID: 2065520920}
   groundCheckRight: {fileID: 623129792}
   rb: {fileID: 2124488971}
@@ -6058,6 +6057,28 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.60778725}
   m_Radius: 0.39221275
+--- !u!95 &2124488973
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124488966}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 73064f32b561b44e686f9af7138ebcd7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
