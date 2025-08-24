@@ -5851,8 +5851,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -353.1, y: 142.46}
-  m_SizeDelta: {x: 51.8515, y: 10.0766}
+  m_AnchoredPosition: {x: -339.81027, y: 140.25905}
+  m_SizeDelta: {x: 78.431, y: 14.4785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265372976
 MonoBehaviour:
@@ -5870,15 +5870,15 @@ MonoBehaviour:
   gradient:
     serializedVersion: 2
     key0: {r: 0.8962264, g: 0.004227493, b: 0.105801664, a: 1}
-    key1: {r: 0.9245283, g: 0.4039675, b: 0.06541473, a: 1}
+    key1: {r: 0.9533821, g: 0.81100315, b: 0, a: 1}
     key2: {r: 0.005757574, g: 0.8701015, b: 0.15728995, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 32768
+    ctime0: 21627
+    ctime1: 43253
     ctime2: 65535
     ctime3: 0
     ctime4: 0
@@ -5893,7 +5893,7 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_Mode: 0
+    m_Mode: 1
     m_ColorSpace: -1
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
@@ -6347,7 +6347,6 @@ GameObject:
   - component: {fileID: 740109867}
   - component: {fileID: 740109866}
   - component: {fileID: 740109865}
-  - component: {fileID: 740109869}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6438,21 +6437,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &740109869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740109864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0c439dc1d3ad6085bb91274bd5aab56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  healthBar: {fileID: 265372976}
 --- !u!1 &749541487
 GameObject:
   m_ObjectHideFlags: 0
@@ -6633,7 +6617,7 @@ Transform:
   m_GameObject: {fileID: 1090036464}
   serializedVersion: 2
   m_LocalRotation: {x: 0.03054212, y: 0.16423526, z: 0.0050876513, w: 0.98593515}
-  m_LocalPosition: {x: -0.2504882, y: -0.16126348, z: 0.1787198}
+  m_LocalPosition: {x: -0.361, y: -0.156, z: 0.216}
   m_LocalScale: {x: 1.0970027, y: 1.0970032, z: 1.0970029}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6685,7 +6669,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.27450347, y: 0.033475175}
+  m_Offset: {x: 0.3522272, y: 0.033475175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6695,7 +6679,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.7353914, y: 0.15209809}
+  m_Size: {x: 0.5799439, y: 0.15209809}
   m_EdgeRadius: 0
 --- !u!1 &1172036964
 GameObject:
@@ -7392,6 +7376,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 847381606}
   - {fileID: 626314223}
+  damageOnCollision: 0
   graphics: {fileID: 1532934249}
 --- !u!61 &1532934248
 BoxCollider2D:
@@ -7502,14 +7487,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532934246}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.03054212, y: -0.16423526, z: -0.0050876513, w: 0.98593515}
-  m_LocalPosition: {x: -1.36, y: 0.31, z: -0.11}
+  m_LocalRotation: {x: -0.012534678, y: -0.04157192, z: -0.008101945, w: 0.99902403}
+  m_LocalPosition: {x: -1.3600001, y: 0.30999994, z: -0.11}
   m_LocalScale: {x: 1.1341484, y: 1.1341479, z: 1.1341482}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1090036465}
   m_Father: {fileID: 2020807262}
-  m_LocalEulerAnglesHint: {x: -3.549, y: -18.915, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.474, y: -4.755, z: -0.868}
 --- !u!95 &1532934251
 Animator:
   serializedVersion: 7
@@ -7720,7 +7705,7 @@ Transform:
   m_GameObject: {fileID: 2020807261}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.95559, y: -3.22839, z: 0}
+  m_LocalPosition: {x: 5.185, y: -3.22839, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8019,6 +8004,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  invicibilityTimeAfterHit: 3
+  invincibilityFlashDelay: 0.2
+  isInvincible: 0
+  graphics: {fileID: 2124488967}
   healthBar: {fileID: 265372976}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

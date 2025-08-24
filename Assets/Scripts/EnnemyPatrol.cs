@@ -5,11 +5,14 @@ public class EnnemyPatrol : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public float speed;
     public Transform[] waypoints;//point de déplacement
+    public int damageOnCollision = 20;
     public SpriteRenderer graphics;
     private Transform target;
     private int destpoint = 0;
     void Start()
     {
+
+        damageOnCollision = 20; 
         target = waypoints[0];
     }
 
@@ -26,4 +29,13 @@ public class EnnemyPatrol : MonoBehaviour
             graphics.flipX = !graphics.flipX; //Inverse la direction du sprite
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(damageOnCollision); // Inflige des dégâts au joueur
+         }
+     }
 }
+ 
