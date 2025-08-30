@@ -9,6 +9,16 @@ public class PlayerHealth : MonoBehaviour
     public bool isInvincible = false;
     public SpriteRenderer graphics;
     public HealthBar healthBar;
+    public static PlayerHealth instance;
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de PlayerHealth dans la scène");
+            return;
+        }
+        instance = this;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +33,19 @@ public class PlayerHealth : MonoBehaviour
         {
             TakeDamage(20);
         }
+    }
+    public void HealPlayer(int amount)
+    {
+        if((currentHealth + amount) > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        else
+        {
+             currentHealth += amount;
+        }
+       
+        healthBar.SetHealth(currentHealth);
     }
     public void TakeDamage(int damage)
     {
