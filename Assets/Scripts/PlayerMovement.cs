@@ -35,8 +35,8 @@ public class PlayerMovement : MonoBehaviour
     {
 
        
-        horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.deltaTime;
+        horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime;
+        verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.fixedDeltaTime;
 
 
         if (Input.GetButtonDown("Jump") && isGrounded)

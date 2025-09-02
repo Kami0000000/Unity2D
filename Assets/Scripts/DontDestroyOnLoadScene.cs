@@ -1,16 +1,30 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class DontDestroyOnLoadScene : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
   public GameObject[] objects;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+  public static DontDestroyOnLoadScene instance;//Singleton
+  private void Awake()
+  {
+    if (instance != null)
     {
-        foreach (var element in objects)
-        {
-            DontDestroyOnLoad(element);
-         }
-        
+      Debug.LogWarning("Il y a plus d'une instance de DontDestroyOnLoadScene dans la scène");
+      return;
     }
+    instance = this;
+        foreach (var element in objects)
+    {
+      DontDestroyOnLoad(element);
+    }
+
+    }
+
+  public void RemoveFromDestroyOnLoad()
+  {
+     foreach (var element in objects)
+    {
+      SceneManager.MoveGameObjectToScene(element, SceneManager.GetActiveScene());
+    }
+    
+   }
 }
