@@ -70,6 +70,7 @@ public class PlayerHealth : MonoBehaviour
         PlayerMovement.instance.enabled = false;//Ne plus pouvoir bouger
         PlayerMovement.instance.animator.SetTrigger("Die");//Aniation de la mort
         PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;//éléments d'intéractiopn désactivée
+        PlayerMovement.instance.rb.linearVelocity = Vector3.zero;
         PlayerMovement.instance.playerCollider.enabled = false;
         GameOverManager.instance.OnPlayerDeath();
          

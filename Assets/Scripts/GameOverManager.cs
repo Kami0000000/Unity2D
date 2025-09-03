@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
@@ -31,6 +31,8 @@ public class GameOverManager : MonoBehaviour
     }
     public void MainMenuButton()
     {
+        DontDestroyOnLoadScene.instance.RemoveFromDestroyOnLoad();
+        SceneManager.LoadScene("MainMenu");
 
     }
  public void QuitButton()
