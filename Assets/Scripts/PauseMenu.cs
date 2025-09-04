@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+
+    public GameObject settingsWindow;
     
     public static bool gameIsPaused = true;
     // Update is called once per frame
@@ -23,6 +25,7 @@ public class PauseMenu : MonoBehaviour
     }
       void Paused()
         {
+
             //désactiver le mouvement
             PlayerMovement.instance.enabled = false;
             //activer le menu
@@ -31,6 +34,8 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 0;
             //cxharger le statut du jeu
             gameIsPaused = true;
+            //ouvrir la fenêtre des paramètres
+            settingsWindow.SetActive(false);
 
         }
       public void Resume()
@@ -54,4 +59,20 @@ public class PauseMenu : MonoBehaviour
             //Chargement de la scène
             SceneManager.LoadScene("MainMenu");
         }
+
+
+
+
+    
+    public void SettingsButton()
+    {
+        
+        settingsWindow.SetActive(true);
+       
+    }
+    public void CloseSettingsWindow()
+    {
+        settingsWindow.SetActive(false);
+    }
+ 
 }

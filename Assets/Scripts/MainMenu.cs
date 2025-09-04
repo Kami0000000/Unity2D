@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(levelToLoad);
     }
-    public void SettignsButton()
+    public void SettingsButton()
     {
         settingsWindow.SetActive(true);
        
