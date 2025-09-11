@@ -16,10 +16,10 @@ public class GameOverManager : MonoBehaviour
     }
     public void OnPlayerDeath()
     { 
-        if (CurrentSceneManager.instance.isPlayerPresentByDefault)
-        {
-            DontDestroyOnLoadScene.instance.RemoveFromDestroyOnLoad(); 
-         }
+        // if (CurrentSceneManager.instance.isPlayerPresentByDefault)
+        // {
+        //    // DontDestroyOnLoadScene.instance.RemoveFromDestroyOnLoad(); 
+        //  }
         gameOverUI.SetActive(true);
     }
     public void RetryButton()
@@ -31,7 +31,7 @@ public class GameOverManager : MonoBehaviour
     }
     public void MainMenuButton()
     {
-        DontDestroyOnLoadScene.instance.RemoveFromDestroyOnLoad();
+        //DontDestroyOnLoadScene.instance.RemoveFromDestroyOnLoad();
         SceneManager.LoadScene("MainMenu");
 
     }

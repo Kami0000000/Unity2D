@@ -52,8 +52,8 @@ public class PauseMenu : MonoBehaviour
         }
      public void LoadMainMenu()
         {
-            //Appeler pour éviter de charger les éléments
-            DontDestroyOnLoadScene.instance.RemoveFromDestroyOnLoad();
+            // //Appeler pour éviter de charger les éléments
+            // DontDestroyOnLoadScene.instance.RemoveFromDestroyOnLoad();
             //Appeler la fonction Resume pour remettre le timeScale à 1
             Resume();
             //Chargement de la scène

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DeathZone : MonoBehaviour
 {
-    private Transform playerSpawn;
+    //private Transform playerSpawn;
     private Animator fadeSystem;
     private void Awake()
     {
@@ -17,7 +17,7 @@ public class DeathZone : MonoBehaviour
         //     playerSpawn = spawnObj.transform;
         //     Debug.Log("✅ PlayerSpawn trouvé à la position " + playerSpawn.position);
         // }
-        playerSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform; //Mettre la postion du joueur sur PlayerSpawn lors de la collision
+        // playerSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform; //Mettre la postion du joueur sur PlayerSpawn lors de la collision
         fadeSystem = GameObject.FindGameObjectWithTag("FadeSystem").GetComponent<Animator>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,7 +34,7 @@ public class DeathZone : MonoBehaviour
     {
         fadeSystem.SetTrigger("FadeIn");
         yield return new WaitForSeconds(1f);
-        collision.transform.position = playerSpawn.position;
+        collision.transform.position = CurrentSceneManager.instance.respawnPoint;
         fadeSystem.SetTrigger("FadeOut");
     }
 }
