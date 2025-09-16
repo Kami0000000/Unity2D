@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2605592890960492888}
   - component: {fileID: 905961836100075136}
   - component: {fileID: 1108721621233344957}
+  - component: {fileID: 373504077954480180}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -106,7 +107,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 250
+  climbSpeed: 150
   jumpForce: 300
+  isClimbing: 0
   groundCheck: {fileID: 2956462697707953916}
   groundCheckRadius: 0.4
   collisionLayers:
@@ -115,6 +118,7 @@ MonoBehaviour:
   rb: {fileID: 219869078618051683}
   animator: {fileID: 2605592890960492888}
   spriteRenderer: {fileID: 9183142703530956029}
+  playerCollider: {fileID: 1108721621233344957}
 --- !u!50 &219869078618051683
 Rigidbody2D:
   serializedVersion: 5
@@ -183,6 +187,7 @@ MonoBehaviour:
   isInvincible: 0
   graphics: {fileID: 9183142703530956029}
   healthBar: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 5cc61ed23774a07efa920f1cc4a49a4f, type: 3}
 --- !u!70 &1108721621233344957
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -220,6 +225,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.007889986, y: -0.24017513}
   m_Size: {x: 0.9929795, y: 1.5196497}
   m_Direction: 0
+--- !u!114 &373504077954480180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794337916766430644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6d955930e08ebdb8dc8e498631e321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3177757081633470471
 GameObject:
   m_ObjectHideFlags: 0
