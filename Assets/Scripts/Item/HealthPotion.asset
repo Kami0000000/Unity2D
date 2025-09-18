@@ -15,6 +15,7 @@ MonoBehaviour:
   id: 1
   itemName: HealthPotion
   description: PV ++ 20 Zandry
+  price: 5
   image: {fileID: -728488644960612398, guid: 9688881f2c56989538174f19b96aba08, type: 3}
   hpGiven: 20
   speedGiven: 0

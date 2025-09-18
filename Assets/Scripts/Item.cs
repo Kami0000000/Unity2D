@@ -6,7 +6,8 @@ public class Item : ScriptableObject
     //potions
     public int id;
     public string itemName;
-    public string description;  
+    public string description; 
+    public int price; 
     public Sprite image;
     public int hpGiven;
     public int speedGiven;

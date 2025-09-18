@@ -15,6 +15,7 @@ MonoBehaviour:
   id: 2
   itemName: SpeedPotion
   description: Dynamic 2.0
+  price: 3
   image: {fileID: 9123314365467124657, guid: 3093ac0590327c477acca420b76955eb, type: 3}
   hpGiven: 0
   speedGiven: 250
