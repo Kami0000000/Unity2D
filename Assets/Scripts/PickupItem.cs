@@ -14,7 +14,14 @@ public class PickUpItem : MonoBehaviour
 
     void Awake()
     {
-         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
+        interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
+           // Vérifie si cet item a déjà été ramassé
+    if (PlayerPrefs.GetInt("ItemPicked_" + item.id, 0) == 1)
+    {
+        // Si oui, désactive/détruit cet objet pour qu'il ne réapparaisse pas
+        Destroy(gameObject);
+        return; // on sort de Awake pour ne rien faire d'autre
+    }
     }
 
     // Update is called once per frame
@@ -29,6 +36,8 @@ public class PickUpItem : MonoBehaviour
     {
        Inventory.instance.content.Add(item);
        Inventory.instance.UpdateInventoryUI();
+       LoadAndSaveData.instance.SaveData();
+       PlayerPrefs.SetInt("ItemPicked_" + item.id, 1);//a été prise
        AudioManager.instance.enabled = false;
        Destroy(gameObject);
     }

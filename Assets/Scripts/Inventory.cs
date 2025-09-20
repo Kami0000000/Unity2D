@@ -19,11 +19,12 @@ public class Inventory : MonoBehaviour
     {
         if (instance != null)
         {
+           // Destroy(gameObject); // supprime la nouvelle instance si déjà existante
             Debug.LogWarning("Il y a plus d'une instance dans la scène");
             return;
         }
         instance = this;
-       
+       //DontDestroyOnLoad(gameObject); // ne pas détruire cet objet quand on change de scène
     }
     void Start()
     {

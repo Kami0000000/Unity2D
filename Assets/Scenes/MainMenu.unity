@@ -1181,17 +1181,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8633821358032695942, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
   m_PrefabInstance: {fileID: 947391122212738956}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1908159184 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9119636201252753488, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
-  m_PrefabInstance: {fileID: 947391122212738956}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908159182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69a280d6e8e3510e18e29b051f04fe35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2126696677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,14 +1338,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1462732662}
-    - target: {fileID: 2373599973886446515, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseSettingsWindow
-      objectReference: {fileID: 0}
-    - target: {fileID: 2373599973886446515, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 2890603354514170283, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1373,18 +1354,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsWindow
       objectReference: {fileID: 0}
-    - target: {fileID: 4054552794322851593, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281991589792275246, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1908159184}
-    - target: {fileID: 4281991589792275246, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetFullScreen
-      objectReference: {fileID: 0}
     - target: {fileID: 6329736971252111375, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1400,14 +1369,6 @@ PrefabInstance:
     - target: {fileID: 8234298122964332830, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8502055620501148454, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1908159184}
-    - target: {fileID: 8502055620501148454, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetResolution
       objectReference: {fileID: 0}
     - target: {fileID: 8633821358032695942, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
       propertyPath: m_Pivot.x
@@ -1435,11 +1396,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8633821358032695942, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 261.1779
+      value: 260.5062
       objectReference: {fileID: 0}
     - target: {fileID: 8633821358032695942, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 143.4393
+      value: 177.6863
       objectReference: {fileID: 0}
     - target: {fileID: 8633821358032695942, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1471,11 +1432,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8633821358032695942, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.3358
       objectReference: {fileID: 0}
     - target: {fileID: 8633821358032695942, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.6182
+      value: -20.7417
       objectReference: {fileID: 0}
     - target: {fileID: 8633821358032695942, guid: 2e4f808a2de3ce86a878c6e1a688ca59, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
